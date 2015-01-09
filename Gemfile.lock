@@ -119,6 +119,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    semantic-ui-sass (0.19.3.1)
+      sass (~> 3.2)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -159,6 +161,7 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  semantic-ui-sass
   spring
   sqlite3
   turbolinks
