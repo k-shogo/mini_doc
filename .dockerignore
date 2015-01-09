@@ -1,0 +1,9 @@
+### Rails ###
+public/assets/*
+
+## Environment normalisation:
+.bundle
+vendor/bundle
+
+## db
+db/*.sqlite3
