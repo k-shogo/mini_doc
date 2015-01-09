@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/doabit/semantic-ui-sass.git
+  revision: 0c4dbb3b86572cf9996edc9955fb912bd675c86d
+  branch: v1.0beta
+  specs:
+    semantic-ui-sass (1.6.2.0)
+      sass (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,8 +143,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    semantic-ui-sass (0.19.3.1)
-      sass (~> 3.2)
     sexp_processor (4.4.4)
     simple_form (3.1.0)
       actionpack (~> 4.0)
@@ -182,7 +188,7 @@ DEPENDENCIES
   redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  semantic-ui-sass
+  semantic-ui-sass!
   simple_form
   spring
   sqlite3
