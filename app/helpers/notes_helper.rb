@@ -1,5 +1,5 @@
 module NotesHelper
-  @@renderer = HTML.new filter_html: true, hard_wrap: true
+  @@renderer = RougeHTMLRender.new filter_html: true, hard_wrap: true
 
   @@markdown = Redcarpet::Markdown.new @@renderer,
     autolink:            true,
