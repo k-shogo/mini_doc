@@ -5,10 +5,7 @@
   <%= @note.title %>
 </p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
+<%= markdown @note.body %>
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
