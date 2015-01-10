@@ -9,8 +9,6 @@ gem 'sqlite3'
 gem 'haml-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use semantic-ui
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -34,6 +32,9 @@ gem 'rouge'
 
 # form builder
 gem 'simple_form'
+
+# font-awesome
+gem 'font-awesome-rails'
 
 # DB bootstrap
 gem 'seed-fu'
