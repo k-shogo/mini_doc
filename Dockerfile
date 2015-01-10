@@ -13,6 +13,7 @@ COPY . /usr/src/app
 
 RUN bundle exec rake db:create
 RUN bundle exec rake db:migrate
+RUN bundle exec rake db:seed_fu
 
 EXPOSE 80
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "80"]
