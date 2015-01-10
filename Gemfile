@@ -36,6 +36,9 @@ gem 'simple_form'
 # font-awesome
 gem 'font-awesome-rails'
 
+# DB bootstrap
+gem 'seed-fu'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
