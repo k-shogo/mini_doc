@@ -35,6 +35,9 @@ gem 'rouge'
 # form builder
 gem 'simple_form'
 
+# DB bootstrap
+gem 'seed-fu'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
