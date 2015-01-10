@@ -1,3 +1,4 @@
+= paginate @notes
 
 %table
   %thead
@@ -13,3 +14,5 @@
         %td
           = link_to 'Edit', edit_note_path(note), class: 'button'
           = link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
+
+= paginate @notes
