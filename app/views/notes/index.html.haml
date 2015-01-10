@@ -1,21 +1,15 @@
-%h1 Listing notes
 
 %table
   %thead
     %tr
-      %th Title
       %th
       %th
       %th
-      
   %tbody
     - @notes.each do |note|
       %tr
-        %td= note.title
-        %td= link_to 'Show', note
-        %td= link_to 'Edit', edit_note_path(note)
-        %td= link_to 'Destroy', note, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Note', new_note_path
+        %td.note_title= link_to note.title, note_path(note)
+        %td= time_ago_in_words note.created_at
+        %td
+          = link_to 'Edit', edit_note_path(note), class: 'button'
+          = link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
