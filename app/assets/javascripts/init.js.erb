@@ -8,7 +8,7 @@
 
       // Global.
       global: {
-        href: '/assets/style.css',
+        href: '<%= asset_path 'style.css' %>',
         containers: 1400,
         grid: {
           gutters: ['2em', 0]
@@ -18,14 +18,14 @@
       // XLarge.
       xlarge: {
         media: '(max-width: 1680px)',
-        href: '/assets/style-xlarge.css',
+        href: '<%= asset_path 'style-xlarge.css' %>',
         containers: 1200
       },
 
         // Large.
       large: {
         media: '(max-width: 1280px)',
-        href: '/assets/style-large.css',
+        href: '<%= asset_path 'style-large.css' %>',
         containers: 960,
         grid: {
           gutters: ['1.5em', 0]
@@ -38,7 +38,7 @@
         // Medium.
       medium: {
         media: '(max-width: 980px)',
-        href: '/assets/style-medium.css',
+        href: '<%= asset_path 'style-medium.css' %>',
         containers: '90%',
         grid: {
           zoom: 2
@@ -48,7 +48,7 @@
         // Small.
       small: {
         media: '(max-width: 736px)',
-        href: '/assets/style-small.css',
+        href: '<%= asset_path 'style-small.css' %>',
         containers: '90%',
         grid: {
           zoom: 3,
@@ -59,7 +59,7 @@
         // XSmall.
       xsmall: {
         media: '(max-width: 480px)',
-        href: '/assets/style-xsmall.css',
+        href: '<%= asset_path 'style-xsmall.css' %>',
         grid: {
           zoom: 4
         }
