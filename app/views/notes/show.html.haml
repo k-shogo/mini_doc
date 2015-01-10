@@ -1,11 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @note.title
+%h1= @note.title
 
 ~ markdown @note.body
 
-= link_to 'Edit', edit_note_path(@note)
-\|
-= link_to 'Back', notes_path
+= link_to 'Edit', edit_note_path(@note), class: 'button'
+
+= link_to 'Back', notes_path, class: 'button'
