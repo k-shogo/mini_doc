@@ -11,9 +11,11 @@ RUN bundle install
 
 COPY . /usr/src/app
 
+ENV RAILS_ENV preview
 RUN bundle exec rake db:create
 RUN bundle exec rake db:migrate
 RUN bundle exec rake db:seed_fu
+RUN bundle exec rake assets:precompile
 
 EXPOSE 80
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "80"]
