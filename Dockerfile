@@ -7,15 +7,15 @@ WORKDIR /usr/src/app
 
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
-RUN bundle install
+RUN bundle install -j4
 
-COPY . /usr/src/app
+ADD . /usr/src/app
 
 ENV RAILS_ENV preview
-RUN bundle exec rake db:create
-RUN bundle exec rake db:migrate
-RUN bundle exec rake db:seed_fu
-RUN bundle exec rake assets:precompile
+RUN bundle exec rake db:create && \
+    bundle exec rake db:migrate && \
+    bundle exec rake db:seed_fu && \
+    bundle exec rake assets:precompile
 
 EXPOSE 80
 CMD ["rails", "server", "-b", "0.0.0.0", "-p", "80"]
