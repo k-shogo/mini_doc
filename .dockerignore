@@ -4,6 +4,14 @@ public/assets/*
 ## Environment normalisation:
 .bundle
 vendor/bundle
+.git
 
 ## db
 db/*.sqlite3
+
+## log
+log
+tmp
+
+## OSX
+.DS_Store
