@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use HAML template
 gem 'haml-rails'
 # Use SCSS for stylesheets
@@ -41,6 +39,14 @@ gem 'seed-fu'
 
 # pagination
 gem 'kaminari'
+
+group :preview do
+  gem 'sqlite3'
+end
+
+group :development, :test, :production do
+  gem 'mysql2'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
