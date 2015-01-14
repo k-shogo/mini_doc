@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
-RUN bundle install -j4
+RUN bundle install -j4 --without development test production
 
 ADD . /usr/src/app
 
