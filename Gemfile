@@ -40,19 +40,21 @@ gem 'seed-fu'
 # pagination
 gem 'kaminari'
 
-group :preview do
-  gem 'sqlite3'
-end
+# database
+gem 'mysql2'
 
-group :development, :test, :production do
-  gem 'mysql2'
-end
+# redis
+gem 'redis'
+
+# elasticsearch
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

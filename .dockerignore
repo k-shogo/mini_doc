@@ -15,3 +15,7 @@ tmp
 
 ## OSX
 .DS_Store
+
+## docker
+.dockerignore
+containers

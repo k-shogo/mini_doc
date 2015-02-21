@@ -1,0 +1,53 @@
+mysql:
+  image: mysql:5.6.23
+  environment:
+    MYSQL_ROOT_PASSWORD: 'pass'
+  ports:
+    - '3306:3306'
+  volumes_from:
+    - datastore
+
+elasticsearch:
+  build: containers/elasticsearch
+  ports:
+    - '9200:9200'
+    - '9300:9300'
+  volumes_from:
+    - datastore
+
+redis:
+  image: redis:2.8.19
+  ports:
+    - '6379:6379'
+  volumes_from:
+    - datastore
+
+nginx:
+  build: containers/nginx
+  ports:
+    - '8080:80'
+  volumes_from:
+    - datastore
+  links:
+    - rails
+
+datastore:
+  build: containers/datastore
+
+rails:
+  build: .
+  ports:
+    - '3000:3000'
+  environment:
+    RAILS_ENV: preview
+    MYSQL_ROOT_PASSWORD: 'pass'
+    DATABASE_URL: mysql2://root:pass@mysql:3306
+    REDIS_URL: redis://redis:6379
+    ELASTICSEARCH_URL: http://elasticsearch:9200
+    SECRET_KEY_BASE: hogehoge
+  volumes_from:
+    - datastore
+  links:
+    - mysql
+    - elasticsearch
+    - redis

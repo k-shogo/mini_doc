@@ -14,15 +14,15 @@ test:
   <<: *default
   database: minidoc_test
 
+preview:
+  <<: *default
+  database: minidoc_preview
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+  host: mysql
+
 production:
   <<: *default
   database: minidoc_production
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
   username: <%= ENV['MINIDOC_DATABASE_USER']%>
   password: <%= ENV['MINIDOC_DATABASE_PASSWORD'] %>
-  host:     <%= ENV['MINIDOC_DATABASE_HOST'] %>
-
-preview:
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-  database: db/preview.sqlite3
