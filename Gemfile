@@ -45,6 +45,7 @@ gem 'mysql2'
 
 # redis
 gem 'redis'
+gem 'redis-objects'
 
 # elasticsearch
 gem 'elasticsearch-model'

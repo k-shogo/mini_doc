@@ -2,6 +2,10 @@
 
 %h1= @note.title
 
+%p
+  = @note.views
+  views
+
 ~ markdown @note.body
 
 = link_to 'Edit', edit_note_path(@note), class: 'button'

@@ -4,12 +4,21 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
+    @note  = Note.new
     @notes = Note.order(created_at: :desc).page params[:page]
+  end
+
+  # GET /notes/search
+  def search
+    @note  = Note.new note_params
+    @notes = Note.__elasticsearch__.search(note_params[:title].to_s).records
+    render action: :index
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
+    @note.views.increment
   end
 
   # GET /notes/new

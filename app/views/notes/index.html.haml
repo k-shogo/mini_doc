@@ -1,3 +1,10 @@
+= simple_form_for @note, url: search_notes_path, method: :get do |f|
+  .row.uniform
+    .9u
+      = f.input_field :title, placeholder: 'search'
+    .3u
+      = f.button :submit, 'Search', class: 'special'
+
 = paginate @notes
 
 %table
