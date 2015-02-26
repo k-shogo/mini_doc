@@ -3,20 +3,20 @@
 ## Build on Dokcer
 
 ```
-fig build
+docker-compose build
 ```
 
 ## setup
 
 ```
-fig run rails db:create
-fig run rails db:migrate
-fig run rails db:seed_fu
-fig run rails rake assets:precompile
+docker-compose run rails db:create
+docker-compose run rails db:migrate
+docker-compose run rails db:seed_fu
+docker-compose run rails rake assets:precompile
 ```
 
 ## run
 
 ```
-fig up
+docker-compose up
 ```
